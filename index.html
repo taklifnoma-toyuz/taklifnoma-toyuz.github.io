@@ -5,47 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taklifnoma Toyuz — Elektron Taklifnomalar Tayyorlash</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Подключаем красивые шрифты -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Переключатель языков -->
+    <div class="lang-switcher">
+        <button onclick="switchLang('uz')" id="btn-uz" class="lang-btn active">UZB</button>
+        <button onclick="switchLang('ru')" id="btn-ru" class="lang-btn">RUS</button>
+    </div>
+
     <!-- Шапка сайта (Hero Section) -->
     <header class="hero">
         <div class="container">
             <div class="logo">Taklifnoma Toyuz</div>
-            <h1>Zamonaviy va unutilmas <br><span>elektron taklifnomalar</span></h1>
-            <p class="hero-subtitle">To'y, tug'ilgan kun va marosimlar uchun noodatiy raqamli taklifnomalar yaratamiz. Mehmonlaringizni hayratda qoldiring!</p>
-            <a href="https://t.me" target="_blank" class="btn">Buyurtma berish</a>
+            <h1 class="lang-el" data-uz="Zamonaviy va unutilmas <br><span>elektron taklifnomalar</span>" data-ru="Современные и незабываемые <br><span>электронные пригласительные</span>">Zamonaviy va unutilmas <br><span>elektron taklifnomalar</span></h1>
+            <p class="hero-subtitle lang-el" data-uz="To'y, tug'ilgan kun va marosimlar uchun noodatiy raqamli taklifnomalar yaratamiz. Mehmonlaringizni hayratda qoldiring!" data-ru="Создаем необычные цифровые пригласительные на свадьбы, дни рождения и мероприятия. Удивите ваших гостей!">To'y, tug'ilgan kun va marosimlar uchun noodatiy raqamli taklifnomalar yaratamiz. Mehmonlaringizni hayratda qoldiring!</p>
+            <a href="https://t.me" target="_blank" class="btn lang-el" data-uz="Buyurtma berish" data-ru="Заказать пригласительное">Buyurtma berish</a>
         </div>
     </header>
 
     <!-- Преимущества (Afzalliklar) -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Nega aynan elektron taklifnoma?</h2>
+            <h2 class="section-title lang-el" data-uz="Nega aynan elektron taklifnoma?" data-ru="Почему именно электронное пригласительное?">Nega aynan elektron taklifnoma?</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="icon">🎵</div>
-                    <h3>Multimedia</h3>
-                    <p>Sizning taklifnomangizda maxsus musiqa, chiroyli video va animatsiyalar bo'ladi.</p>
+                    <h3 class="lang-el" data-uz="Multimedia" data-ru="Мультимедиа">Multimedia</h3>
+                    <p class="lang-el" data-uz="Sizning taklifnomangizda maxsus musiqa, chiroyli video va animatsiyalar bo'ladi." data-ru="В вашем пригласительном будет специальная музыка, красивое видео и плавная анимация.">Sizning taklifnomangizda maxsus musiqa, chiroyli video va animatsiyalar bo'ladi.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">📍</div>
-                    <h3>Xarita integratsiyasi</h3>
-                    <p>Mehmonlar to'yxona manzilini Google Maps yoki Yandex Xarita orqali oson topishadi.</p>
+                    <h3 class="lang-el" data-uz="Xarita integratsiyasi" data-ru="Интеграция карт">Xarita integratsiyasi</h3>
+                    <p class="lang-el" data-uz="Mehmonlar to'yxona manzilini Google Maps yoki Yandex Xarita orqali oson topishadi." data-ru="Гости легко найдут место проведения банкета через Google Maps или Yandex Навигатор.">Mehmonlar to'yxona manzilini Google Maps yoki Yandex Xarita orqali oson topishadi.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">📊</div>
-                    <h3>Mehmonlar hisoboti</h3>
-                    <p>Kim kelishi yoki kela olmasligini aniq bilasiz. Barcha javoblar telegramingizga boradi.</p>
+                    <h3 class="lang-el" data-uz="Mehmonlar hisoboti" data-ru="Отчет о гостях">Mehmonlar hisoboti</h3>
+                    <p class="lang-el" data-uz="Kim kelishi yoki kela olmasligini aniq bilasiz. Barcha javoblar telegramingizga boradi." data-ru="Вы будете точно знать, кто придет, а кто нет. Все ответы гостей приходят сразу в Telegram.">Kim kelishi yoki kela olmasligini aniq bilasiz. Barcha javoblar telegramingizga boradi.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">💰</div>
-                    <h3>Tejamkorlik</h3>
-                    <p>Yuzlab qog'oz taklifnomalarni chop etish va tarqatish xarajatlaridan qutulasiz.</p>
+                    <h3 class="lang-el" data-uz="Tejamkorlik" data-ru="Экономия">Tejamkorlik</h3>
+                    <p class="lang-el" data-uz="Yuzlab qog'oz taklifnomalarni chop etish va tarqatish xarajatlaridan qutulasiz." data-ru="Вы избавляетесь от расходов на печать и ручную доставку сотен бумажных открыток.">Yuzlab qog'oz taklifnomalarni chop etish va tarqatish xarajatlaridan qutulasiz.</p>
                 </div>
             </div>
         </div>
@@ -54,27 +59,27 @@
     <!-- Каталог / Портфолио (Katalog) -->
     <section class="portfolio">
         <div class="container">
-            <h2 class="section-title">Bizning ishlarimiz (Katalog)</h2>
-            <p class="section-subtitle">Mavjud shablonlarni ko'ring yoki mutlaqo yangi dizaynga buyurtma bering</p>
+            <h2 class="section-title lang-el" data-uz="Bizning ishlarimiz (Katalog)" data-ru="Наши работы (Каталог)">Bizning ishlarimiz (Katalog)</h2>
+            <p class="section-subtitle lang-el" data-uz="Mavjud shablonlarni ko'ring yoki mutlaqo yangi dizaynga buyurtma bering" data-ru="Посмотрите готовые шаблоны или закажите абсолютно индивидуальный дизайн">Mavjud shablonlarni ko'ring yoki mutlaqo yangi dizaynga buyurtma bering</p>
             
             <div class="portfolio-grid">
-                <!-- Пример 1 -->
+                <!-- Реальная работа (Самандар и Зилола) -->
                 <div class="portfolio-card">
                     <div class="card-image bg-1"></div>
                     <div class="card-content">
-                        <h3>Premium To'y Taklifnomasi</h3>
-                        <p>Klassik uslubdagi konvert, oltin harflar va mayin musiqa bilan.</p>
-                        <a href="./taklif-noma-zilolahon-samandarhon" class="btn-secondary" target="_blank">Ko'rish ➔</a>
+                        <h3 class="lang-el" data-uz="Premium To'y Taklifnomasi" data-ru="Премиум свадебное приглашение">Premium To'y Taklifnomasi</h3>
+                        <p class="lang-el" data-uz="Klassik uslubdagi konvert, oltin harflar, yoqimli musiqa va RSVP-forma bilan." data-ru="Классический интерактивный конверт, золотые буквы, приятная музыка и RSVP-форма ответов.">Klassik uslubdagi konvert, oltin harflar, yoqimli musiqa va RSVP-forma bilan.</p>
+                        <a href="./taklif-noma-zilolahon-samandarhon" class="btn-secondary lang-el" data-uz="Ko'rish ➔" data-ru="Посмотреть ➔" target="_blank">Ko'rish ➔</a>
                     </div>
                 </div>
 
-                <!-- Пример 2 -->
+                <!-- Будущий шаблон -->
                 <div class="portfolio-card">
                     <div class="card-image bg-2"></div>
                     <div class="card-content">
-                        <h3>Zamonaviy Tug'ilgan Kun</h3>
-                        <p>Yorqin neon ranglar, rasm galereyasi va noodatiy qayta sanoq taymeri.</p>
-                        <a href="#" class="btn-secondary">Tez kunda...</a>
+                        <h3 class="lang-el" data-uz="Zamonaviy Tug'ilgan Kun" data-ru="Современный День Рождения">Zamonaviy Tug'ilgan Kun</h3>
+                        <p class="lang-el" data-uz="Yorqin neon ranglar, rasm galereyasi va noodatiy qayta sanoq taymeri." data-ru="Яркие неоновые цвета, галерея фотографий и стильный таймер обратного отсчета.">Yorqin neon ranglar, rasm galereyasi va noodatiy qayta sanoq taymeri.</p>
+                        <a href="#" class="btn-secondary lang-el" data-uz="Tez kunda..." data-ru="Скоро...">Tez kunda...</a>
                     </div>
                 </div>
             </div>
@@ -85,9 +90,29 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Taklifnoma Toyuz. Barcha huquqlar himoyalangan.</p>
-            <p>Aloqa uchun Telegram: <a href="https://t.me" target="_blank">@taklifnoma_toyuz</a></p>
+            <p class="lang-el" data-uz="Buyurtmalar uchun Telegram: " data-ru="Для заказов в Telegram: ">Buyurtmalar uchun Telegram: <a href="https://t.me" target="_blank">@drvonka</a></p>
+            <div class="social-links">
+                <a href="https://github.com/AnonimusShamshiAlex" target="_blank">GitHub</a> | 
+                <a href="https://drtoolparadox.base44.app/blog" target="_blank">Личный блог (DR TOOL)</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Скрипт переключения языков -->
+    <script>
+        function switchLang(lang) {
+            // Меняем активную кнопку
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            // Переводим элементы
+            document.querySelectorAll('.lang-el').forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) {
+                    el.innerHTML = text;
+                }
+            });
+        }
+    </script>
 </body>
 </html>
