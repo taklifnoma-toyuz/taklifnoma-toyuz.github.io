@@ -1,23 +1,90 @@
-/* Кнопки переключения языков */
-.lang-switcher {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c2724;
+    background-color: #faf8f5;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+/* Элегантное верхнее меню (Navbar) */
+.navbar {
     position: fixed;
-    top: 20px;
-    right: 5%;
-    z-index: 1000;
-    background: rgba(24, 20, 17, 0.8);
-    padding: 5px;
-    border-radius: 20px;
-    border: 1px solid #dfba81;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(24, 20, 17, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(223, 186, 129, 0.2);
+    z-index: 9999;
+}
+
+.nav-container {
+    max-width: 1100px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
-    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #dfba81;
+}
+
+/* Переключатель языков внутри меню */
+.lang-switcher {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3px;
+    border-radius: 20px;
+    border: 1px solid rgba(223, 186, 129, 0.4);
+    display: flex;
+    gap: 2px;
 }
 
 .lang-btn {
     background: none;
     border: none;
     color: #fff;
-    padding: 6px 14px;
-    font-size: 12px;
+    padding: 4px 12px;
+    font-size: 11px;
     font-weight: 600;
     cursor: pointer;
     border-radius: 15px;
@@ -30,24 +97,248 @@
     color: #181411;
 }
 
-.lang-btn:hover:not(.active) {
-    color: #dfba81;
+/* Новая шапка сайта (Hero Section) */
+.hero {
+    position: relative;
+    background: url('https://unsplash.com') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 70px;
 }
 
-/* Ссылки в подвале */
-.social-links {
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(18, 15, 13, 0.8), rgba(28, 24, 21, 0.6));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    font-style: italic;
+    color: #dfba81;
+    font-weight: 400;
+}
+
+.hero-divider {
+    width: 80px;
+    height: 1px;
+    background-color: #dfba81;
+    margin: 0 auto 30px auto;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    max-width: 650px;
+    margin: 0 auto 45px auto;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.5px;
+}
+
+/* Красивая кнопка */
+.btn {
+    display: inline-block;
+    padding: 16px 45px;
+    background-color: #dfba81;
+    color: #181411;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(223, 186, 129, 0.2);
+}
+
+.btn:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    color: #181411;
+    font-weight: 600;
     margin-top: 15px;
+    font-size: 14px;
+    border-bottom: 2px solid #dfba81;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    color: #dfba81;
+    padding-left: 5px;
+}
+
+/* Секции */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 45px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #dfba81;
+    margin: 15px auto 0 auto;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 60px;
+    color: #736b66;
+    font-size: 15px;
+}
+
+/* Преимущества */
+.features {
+    background-color: #fff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    padding: 40px 25px;
+    background: #faf8f5;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    border: 1px solid #f2eade;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card .icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    font-size: 13.5px;
+    color: #615853;
+}
+
+/* Портфолио */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.portfolio-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(24, 20, 17, 0.03);
+    border: 1px solid #ebdcc5;
+    transition: all 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(24, 20, 17, 0.07);
+}
+
+.card-image {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-1 { background-image: url('https://unsplash.com'); }
+.bg-2 { background-image: url('https://unsplash.com'); }
+
+.card-content {
+    padding: 30px;
+}
+
+.card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #615853;
+}
+
+/* Подвал */
+.footer {
+    background-color: #1c1816;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(223, 186, 129, 0.2);
+}
+
+.footer a {
+    color: #dfba81;
+    text-decoration: none;
+}
+
+.social-links {
+    margin-top: 20px;
     font-size: 13px;
 }
 
 .social-links a {
     color: #dfba81;
     text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
+    margin: 0 12px;
+    transition: all 0.3s;
 }
 
 .social-links a:hover {
     color: #fff;
-    border-bottom: 1px dashed #dfba81;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    .nav-menu { display: none; } /* Скрываем текстовое меню на мобильных для аккуратности */
+    .hero h1 { font-size: 34px; }
+    .hero-subtitle { font-size: 14px; }
+    .section-title { font-size: 26px; }
 }
