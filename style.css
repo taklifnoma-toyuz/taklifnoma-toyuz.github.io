@@ -1,3 +1,9 @@
+---
+
+### 2. Полный код для файла `style.css`
+Полностью обновите ваш файл **`style.css`**, вставив в него этот стильный, современный код с красивым меню сверху:
+
+```css
 * {
     margin: 0;
     padding: 0;
@@ -100,7 +106,7 @@ body {
 /* Новая шапка сайта (Hero Section) */
 .hero {
     position: relative;
-    background: url('https://unsplash.com') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -156,7 +162,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Красивая кнопка */
+/* Кнопки */
 .btn {
     display: inline-block;
     padding: 16px 45px;
@@ -287,9 +293,6 @@ body {
     background-position: center;
 }
 
-.bg-1 { background-image: url('https://unsplash.com'); }
-.bg-2 { background-image: url('https://unsplash.com'); }
-
 .card-content {
     padding: 30px;
 }
@@ -337,7 +340,7 @@ body {
 
 /* Мобильная адаптивность */
 @media (max-width: 768px) {
-    .nav-menu { display: none; } /* Скрываем текстовое меню на мобильных для аккуратности */
+    .nav-menu { display: none; }
     .hero h1 { font-size: 34px; }
     .hero-subtitle { font-size: 14px; }
     .section-title { font-size: 26px; }
