@@ -1,219 +1,53 @@
-/* Общие настройки */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-    background-color: #fcfbfa;
-    line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 0;
-}
-
-/* Главный блок (Hero) */
-.hero {
-    background: linear-gradient(rgba(24, 20, 17, 0.65), rgba(24, 20, 17, 0.65)), 
-                url('https://unsplash.com') no-repeat center center/cover;
-    height: 90vh;
+/* Кнопки переключения языков */
+.lang-switcher {
+    position: fixed;
+    top: 20px;
+    right: 5%;
+    z-index: 1000;
+    background: rgba(24, 20, 17, 0.8);
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #dfba81;
     display: flex;
-    align-items: center;
-    text-align: center;
+    gap: 5px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
     color: #fff;
-}
-
-.hero .container {
-    padding: 0;
-}
-
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
+    padding: 6px 14px;
+    font-size: 12px;
     font-weight: 600;
-    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.hero h1 span {
-    font-style: italic;
+.lang-btn.active {
+    background-color: #dfba81;
+    color: #181411;
+}
+
+.lang-btn:hover:not(.active) {
     color: #dfba81;
 }
 
-.hero-subtitle {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    font-weight: 300;
-    opacity: 0.9;
-}
-
-/* Кнопки */
-.btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #dfba81;
-    color: #181411;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-.btn:hover {
-    background-color: #fff;
-    transform: translateY(-3px);
-}
-
-.btn-secondary {
-    display: inline-block;
-    text-decoration: none;
-    color: #181411;
-    font-weight: 600;
+/* Ссылки в подвале */
+.social-links {
     margin-top: 15px;
-    font-size: 14px;
-    border-bottom: 2px solid #dfba81;
+    font-size: 13px;
+}
+
+.social-links a {
+    color: #dfba81;
+    text-decoration: none;
+    margin: 0 10px;
     transition: color 0.3s;
 }
 
-.btn-secondary:hover {
-    color: #dfba81;
-}
-
-/* Секции */
-.section-title {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 2px;
-    background-color: #dfba81;
-    margin: 15px auto 0 auto;
-}
-
-.section-subtitle {
-    text-align: center;
-    margin-top: -30px;
-    margin-bottom: 50px;
-    color: #666;
-}
-
-/* Преимущества */
-.features {
-    background-color: #fff;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    text-align: center;
-}
-
-.feature-card {
-    padding: 30px 20px;
-    background: #fcfbfa;
-    border-radius: 6px;
-    border: 1px solid #f0edf7;
-}
-
-.feature-card .icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.feature-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.feature-card p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Портфолио (Каталог) */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-.portfolio-card {
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    border: 1px solid #eee;
-}
-
-.card-image {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Заглушки для картинок товаров (можно заменить на свои) */
-.bg-1 { background-image: url('https://unsplash.com'); }
-.bg-2 { background-image: url('https://unsplash.com'); }
-
-.card-content {
-    padding: 25px;
-}
-
-.card-content h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.card-content p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Подвал */
-.footer {
-    background-color: #181411;
+.social-links a:hover {
     color: #fff;
-    text-align: center;
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-.footer a {
-    color: #dfba81;
-    text-decoration: none;
-}
-
-/* Адаптивность для телефонов */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 32px; }
-    .hero-subtitle { font-size: 15px; }
-    .section-title { font-size: 28px; }
+    border-bottom: 1px dashed #dfba81;
 }
